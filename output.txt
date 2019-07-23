@@ -1,0 +1,263 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/kingusmao/fd/builds/release/bin/translate/translate.py /home/kingusmao/domain.pddl /home/kingusmao/problem.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 21 rules.
+Computing model... [0.030s CPU, 0.028s wall-clock]
+1005 relevant atoms
+663 auxiliary atoms
+1668 final queue length
+2861 total queue pushes
+Completing instantiation... [0.040s CPU, 0.044s wall-clock]
+Instantiating: [0.070s CPU, 0.075s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.000s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.010s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.003s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+18 uncovered facts
+Choosing groups: [0.000s CPU, 0.003s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.019s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.050s CPU, 0.050s wall-clock]
+850 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+34 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.027s wall-clock]
+Reordering and filtering variables...
+35 of 35 variables necessary.
+18 of 35 mutex groups necessary.
+578 of 578 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.016s wall-clock]
+Translator variables: 35
+Translator derived variables: 0
+Translator facts: 342
+Translator goal facts: 16
+Translator mutex groups: 18
+Translator total mutex groups size: 324
+Translator operators: 578
+Translator axioms: 0
+Translator task size: 5001
+Translator peak memory: 49288 KB
+Writing output... [0.020s CPU, 0.011s wall-clock]
+Done! [0.210s CPU, 0.208s wall-clock]
+
+translate exit code: 0
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/kingusmao/fd/builds/release/bin/downward --landmarks 'lm=lm_exhaust(reasonable_orders=false, only_causal_landmarks=false, disjunctive_landmarks=false, conjunctive_landmarks=true, no_orders=false)' --heuristic 'hlm=lmcount(lm)' --search 'astar(lmcut())' --internal-plan-file sas_plan < output.sas
+reading input... [t=2.5828e-05s]
+done reading input! [t=0.00759628s]
+Initializing landmarks count heuristic...
+Initializing Exploration...
+Generating landmarks by testing all facts with RPG method
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.0423653s
+Discovered 86 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+0 edges
+############################################################################
+Landmark graph: 
+LM 15 Atom on(q, l) (var34(34)->12)(goal) Achievers (1, 1)
+
+LM 85 Atom on(q, b) (var34(34)->2) Achievers (1, 1)
+
+LM 84 Atom holding(q) (var34(34)->0) Achievers (17, 1)
+
+LM 14 Atom on(p, q) (var33(33)->16)(goal) Achievers (1, 1)
+
+LM 83 Atom on(p, h) (var33(33)->8) Achievers (1, 1)
+
+LM 82 Atom holding(p) (var33(33)->0) Achievers (17, 1)
+
+LM 81 Atom ontable(o) (var32(32)->17) Achievers (1, 1)
+
+LM 13 Atom on(o, m) (var32(32)->13)(goal) Achievers (1, 1)
+
+LM 80 Atom holding(o) (var32(32)->0) Achievers (17, 1)
+
+LM 79 Atom on(n, f) (var31(31)->6) Achievers (1, 1)
+
+LM 12 Atom on(n, c) (var31(31)->3)(goal) Achievers (1, 1)
+
+LM 78 Atom holding(n) (var31(31)->0) Achievers (17, 1)
+
+LM 77 Atom on(m, i) (var30(30)->9) Achievers (1, 1)
+
+LM 11 Atom on(m, d) (var30(30)->4)(goal) Achievers (1, 1)
+
+LM 76 Atom holding(m) (var30(30)->0) Achievers (17, 1)
+
+LM 10 Atom on(l, n) (var29(29)->13)(goal) Achievers (1, 1)
+
+LM 75 Atom on(l, d) (var29(29)->4) Achievers (1, 1)
+
+LM 74 Atom holding(l) (var29(29)->0) Achievers (17, 1)
+
+LM 9 Atom on(k, f) (var28(28)->6)(goal) Achievers (1, 1)
+
+LM 73 Atom on(k, c) (var28(28)->3) Achievers (1, 1)
+
+LM 72 Atom holding(k) (var28(28)->0) Achievers (17, 1)
+
+LM 71 Atom on(j, o) (var27(27)->14) Achievers (1, 1)
+
+LM 8 Atom on(j, b) (var27(27)->2)(goal) Achievers (1, 1)
+
+LM 70 Atom holding(j) (var27(27)->0) Achievers (17, 1)
+
+LM 7 Atom on(i, k) (var26(26)->10)(goal) Achievers (1, 1)
+
+LM 69 Atom on(i, e) (var26(26)->5) Achievers (1, 1)
+
+LM 68 Atom holding(i) (var26(26)->0) Achievers (17, 1)
+
+LM 67 Atom on(h, j) (var25(25)->9) Achievers (1, 1)
+
+LM 6 Atom on(h, e) (var25(25)->5)(goal) Achievers (1, 1)
+
+LM 66 Atom holding(h) (var25(25)->0) Achievers (17, 1)
+
+LM 65 Atom on(g, q) (var24(24)->16) Achievers (1, 1)
+
+LM 5 Atom on(g, a) (var24(24)->1)(goal) Achievers (1, 1)
+
+LM 64 Atom holding(g) (var24(24)->0) Achievers (17, 1)
+
+LM 63 Atom ontable(f) (var23(23)->17) Achievers (1, 1)
+
+LM 4 Atom on(f, j) (var23(23)->9)(goal) Achievers (1, 1)
+
+LM 62 Atom holding(f) (var23(23)->0) Achievers (17, 1)
+
+LM 3 Atom on(e, o) (var22(22)->14)(goal) Achievers (1, 1)
+
+LM 61 Atom on(e, g) (var22(22)->6) Achievers (1, 1)
+
+LM 60 Atom holding(e) (var22(22)->0) Achievers (17, 1)
+
+LM 59 Atom on(c, m) (var21(21)->12) Achievers (1, 1)
+
+LM 2 Atom on(c, i) (var21(21)->8)(goal) Achievers (1, 1)
+
+LM 58 Atom holding(c) (var21(21)->0) Achievers (17, 1)
+
+LM 57 Atom on(b, p) (var20(20)->15) Achievers (1, 1)
+
+LM 1 Atom on(b, g) (var20(20)->6)(goal) Achievers (1, 1)
+
+LM 56 Atom holding(b) (var20(20)->0) Achievers (17, 1)
+
+LM 55 Atom ontable(a) (var19(19)->17) Achievers (1, 1)
+
+LM 0 Atom on(a, h) (var19(19)->7)(goal) Achievers (1, 1)
+
+LM 54 Atom holding(a) (var19(19)->0) Achievers (17, 1)
+
+LM 53 NegatedAtom handempty() (var18(18)->1) Achievers (289, 3)
+
+LM 52 Atom handempty() (var18(18)->0) Achievers (289, 289)
+
+LM 51 NegatedAtom clear(q) (var17(17)->1) Achievers (33, 12)
+
+LM 50 Atom clear(q) (var17(17)->0) Achievers (33, 1)
+
+LM 49 NegatedAtom clear(p) (var16(16)->1) Achievers (33, 14)
+
+LM 48 Atom clear(p) (var16(16)->0) Achievers (33, 1)
+
+LM 47 NegatedAtom clear(o) (var15(15)->1) Achievers (33, 17)
+
+LM 46 Atom clear(o) (var15(15)->0) Achievers (33, 1)
+
+LM 45 NegatedAtom clear(n) (var14(14)->1) Achievers (33, 16)
+
+LM 44 Atom clear(n) (var14(14)->0) Achievers (33, 33)
+
+LM 43 NegatedAtom clear(m) (var13(13)->1) Achievers (33, 8)
+
+LM 42 Atom clear(m) (var13(13)->0) Achievers (33, 1)
+
+LM 41 NegatedAtom clear(l) (var12(12)->1) Achievers (33, 15)
+
+LM 40 Atom clear(l) (var12(12)->0) Achievers (33, 33)
+
+LM 39 NegatedAtom clear(k) (var11(11)->1) Achievers (33, 6)
+
+LM 38 Atom clear(k) (var11(11)->0) Achievers (33, 33)
+
+LM 37 NegatedAtom clear(j) (var10(10)->1) Achievers (33, 16)
+
+LM 36 Atom clear(j) (var10(10)->0) Achievers (33, 1)
+
+LM 35 NegatedAtom clear(i) (var9(9)->1) Achievers (33, 9)
+
+LM 34 Atom clear(i) (var9(9)->0) Achievers (33, 1)
+
+LM 33 NegatedAtom clear(h) (var8(8)->1) Achievers (33, 15)
+
+LM 32 Atom clear(h) (var8(8)->0) Achievers (33, 1)
+
+LM 31 NegatedAtom clear(g) (var7(7)->1) Achievers (33, 11)
+
+LM 30 Atom clear(g) (var7(7)->0) Achievers (33, 1)
+
+LM 29 NegatedAtom clear(f) (var6(6)->1) Achievers (33, 17)
+
+LM 28 Atom clear(f) (var6(6)->0) Achievers (33, 1)
+
+LM 27 NegatedAtom clear(e) (var5(5)->1) Achievers (33, 10)
+
+LM 26 Atom clear(e) (var5(5)->0) Achievers (33, 1)
+
+LM 25 NegatedAtom clear(c) (var4(4)->1) Achievers (33, 7)
+
+LM 24 Atom clear(c) (var4(4)->0) Achievers (33, 1)
+
+LM 23 NegatedAtom clear(b) (var3(3)->1) Achievers (33, 13)
+
+LM 22 Atom clear(b) (var3(3)->0) Achievers (33, 1)
+
+LM 21 NegatedAtom clear(a) (var2(2)->1) Achievers (33, 17)
+
+LM 20 Atom clear(a) (var2(2)->0) Achievers (33, 1)
+
+LM 19 NegatedAtom clear(d) (var1(1)->1) Achievers (33, 16)
+
+LM 18 Atom clear(d) (var1(1)->0) Achievers (33, 1)
+
+LM 17 Atom on(d, a) (var0(0)->1) Achievers (1, 1)
+
+LM 16 Atom holding(d) (var0(0)->0) Achievers (17, 1)
+
+Landmark graph end.
+############################################################################
+Peak memory: 23232 KB
+Remove intermediate file output.sas
+
+search exit code: 0
