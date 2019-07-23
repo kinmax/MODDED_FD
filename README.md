@@ -1,3 +1,11 @@
+This is a modified version of Fast Downward to turn it into a landmark extractor. 
+
+This repository does not contain all artifacts needed to build Fast Downward. You will still need to clone it from FD official repository.
+
+All modifications made are in ```src/search/landmarks/landmark_factory.cc```
+
+-------------------------------------------------------------------------------------
+
 Fast Downward is a domain-independent planning system.
 
 For documentation and contact information see http://www.fast-downward.org/.
