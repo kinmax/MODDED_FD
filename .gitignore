@@ -24,7 +24,5 @@
 # End of https://www.gitignore.io/api/mercurial,visualstudiocode
 
 builds/
-driver/
 experiments/
-misc/
 
