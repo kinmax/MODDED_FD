@@ -1,8 +1,10 @@
 This is a modified version of Fast Downward to turn it into a landmark extractor. 
 
-This repository does not contain all artifacts needed to build Fast Downward. You will still need to clone it from FD official repository.
-
 All modifications made are in ```src/search/landmarks/landmark_factory.cc```, more precisely around lines 80-83
+
+You can build this project and use it as a landmark extractor.
+
+For more information on how to use Fast Downward, please go to their official website: http://www.fast-downward.org/.
 
 -------------------------------------------------------------------------------------
 
